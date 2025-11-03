@@ -15,43 +15,8 @@
 //     - Moyenne < 10  : "À revoir"
 // Dans le cas où l'élève n'a pas de notes, la moyenne doit être considérée comme 0 et le commentaire "À revoir".
 function showStudentBulletin(eleves) {
-  return eleves.map(eleve => {
-    const notes = eleve.notes;
-    const moyenne =
-      notes.length > 0
-        ? parseFloat((notes.reduce((acc, n) => acc + n, 0) / notes.length).toFixed(2))
-        : 0;
-
-    let commentaire = "";
-    if (moyenne >= 16) {
-      commentaire = "Excellent";
-    } else if (moyenne >= 14) {
-      commentaire = "Très Bien";
-    } else if (moyenne >= 12) {
-      commentaire = "Bien";
-    } else if (moyenne >= 10) {
-      commentaire = "Passable";
-    } else {
-      commentaire = "À revoir";
-    }
-
-    return {
-      nom: eleve.nom,
-      moyenne: moyenne,
-      commentaire: commentaire
-    };
-  });
+	
 }
-const eleves = [
-  { nom: "Madi", notes: [15, 17, 18] },
-  { nom: "Glodi", notes: [12, 13, 11] },
-  { nom: "Yuhe", notes: [9, 8, 10] },
-  { nom: "Nathy", notes: [] }
-];
-
-console.log(showStudentBulletin(eleves));
-
-
 
 module.exports = {
 	showStudentBulletin,
