@@ -18,6 +18,7 @@
 //    - Si l'utilisateur est bloqué (`estBloque` à true), retourne un message d'erreur spécifique.
 //    - Sinon, met à jour `estConnecte` à true pour cet utilisateur et retourne l'objet utilisateur connecté.
 
+/ Base de données des utilisateurs
 const baseDeDonnees = [];
 
 // Fonction d'inscription
