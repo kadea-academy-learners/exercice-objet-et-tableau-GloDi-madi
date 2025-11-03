@@ -6,7 +6,9 @@
 // La fonction doit retourner un tableau contenant les noms des utilisateurs qui sont admin.
 
 function whoIsAdmin() {
-return utilisateurs
+
+
+  return utilisateurs
     .filter(user => user.estAdmin === true)
     .map(user => user.nom);
 }
